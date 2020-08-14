@@ -1,17 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import List from './containers/List'
+import 'bootswatch/dist/darkly/bootstrap.min.css';
+import Login from './containers/Login'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import Home from './containers/Home'
+
+const App = () => {
+	return (
+		<Router>
+			<nav className="navbar navbar-dark bg-dark border-bottom border-white">
+				<Link to="/">
+					<li className="navbar-brand">Nutricion y salud</li>
+				</Link>
+				<Link to="list">
+					<li>Buscar recetas</li>
+				</Link>
+				<Login />
+			</nav>
+			<main className="">
+				<div className="container">
+					<Switch>
+						<Route path="/" exact component={Home} />
+						<Route path="/list" component={List}/>
+					</Switch>
+				</div>
+			</main>
+		</Router>
+	)
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+	<App />,
+	document.getElementById('root')
+)
