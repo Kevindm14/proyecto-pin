@@ -4,7 +4,7 @@ const Home = () => {
     return (
         <div className="jumbotron my-5 bg-light text-center">
             <h5 className="py-5">Hola, nuestra mision es mejorar tu salud!</h5>
-            <img src="https://bucket2.glanacion.com/anexos/fotos/84/2250684h800.jpg" alt="imagen" className="rounded" />
+            <img src="https://bucket2.glanacion.com/anexos/fotos/84/2250684h800.jpg" alt="imagen" className="rounded img-fluid" />
             <p className="my-4 ext-center">
                 Nuestra mision es difundir, contribuir y orientar al publico en general sin importar edad ni sexo, sobre una buena alimentacion
                 proporcionando conocimiento sobre alimentos saludables, estamos comprometidos en brindar informacion actualizada a la cual se pueda

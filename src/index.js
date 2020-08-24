@@ -12,13 +12,13 @@ const App = () => {
 			<nav className="navbar navbar-dark bg-dark border-bottom border-white">
 				<Link to="/">
 					<li className="navbar-brand">Nutricion y salud</li>
-				</Link>
-				<Link to="list">
-					<li>Buscar recetas</li>
+					<Link to="list" class="nav-item text-decoration-none btn btn-sm btn-success">
+						<li class="nav-link">Buscar recetas</li>
+					</Link>
 				</Link>
 				<Login />
 			</nav>
-			<main className="">
+			<main>
 				<div className="container">
 					<Switch>
 						<Route path="/" exact component={Home} />

@@ -18,18 +18,21 @@ class Login extends Component {
         <div>
             {
               user
-                ? <p>Hola, {user.displayName}</p> : <p>Hola, invitado</p>
+                ? <small className="mx-4">Hola, {user.displayName}</small> : <small className="mx-4">Hola, invitado</small>
             }
   
             {
               user
-                ? <button className="btn btn-danger" onClick={signOut}>Cerrar sesion</button>
-                : <button className="btn btn-success"  onClick={signInWithGoogle}>Inicia sesion con google</button>
+                ? 
+                  <button className="btn btn-danger" onClick={signOut}>Cerrar sesion</button>
+                : 
+                  <button className="btn btn-success"  onClick={signInWithGoogle}>Inicia sesion con google</button>
             }
         </div>
       );
     }
   }
+
 
 const firebaseAppAuth = firebaseApp.auth();
 
